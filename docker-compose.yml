@@ -14,3 +14,22 @@ services:
     #restart: always
     volumes:
       - ./spigot:/spigot
+    networks:
+      - mcnet
+  geyser:
+    container_name: geyser
+    image: akaronte/geyser:latest
+    ports:
+      - 19132:19132
+    tty: true
+    stdin_open: true
+    #restart: unless-stopped
+    #restart: always
+    volumes:
+      - ./geyser:/geyser
+    networks:
+      - mcnet
+networks:
+  mcnet:
+    # Use a custom driver
+    driver: bridge
