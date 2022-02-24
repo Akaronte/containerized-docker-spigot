@@ -2,7 +2,7 @@ version: "3"
 services:
   mc:
     container_name: spigot
-    image: akaronte/spigot:1.17.1
+    image: akaronte/spigot:1.18.1
     ports:
       - 25565:25565
       #- 19132:19132
