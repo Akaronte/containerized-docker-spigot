@@ -1,9 +1,9 @@
 
-FROM openjdk:17-jdk-alpine
+FROM openjdk:18-jdk-alpine
 
 WORKDIR /spigot/
 
-COPY spigot-1.18.2.jar /usr/bin/spigot.jar
+COPY spigot-1.19.jar /usr/bin/spigot.jar
 
 COPY docker-entrypoint.sh /usr/local/bin/
 
